@@ -1,0 +1,111 @@
+I've used python + numpy to write the assignment to get the best of both worlds, ease of writing and performance(numpy operations turned out to be surprisingly performant, and outperformed the assignments of some other classmates i've talked to). It took about 5 seconds to obtain the results from the given tweet set on my computer.
+
+For preprocessing, I've performed the following steps
+  * Case folding, by just converting every word to lower case
+  * Stop word removal (used a list found on the web, and added twitter-specific words like RT)
+  * Removing @mentions and 1-character words.
+No lemmatization/stemming was done, #hashtags were just treated like normal words (without the # sign)
+
+The top 100 words and their pagerank scores were:
+biden 0.043547
+ryan 0.033082
+vpdebate 0.012635
+abortion 0.011835
+joe 0.010535
+paul 0.009522
+debate 0.008298
+just 0.007807
+romney 0.007003
+co 0.006601
+http 0.006437
+like 0.006383
+right 0.005993
+life 0.005743
+impose 0.005311
+obama 0.005212
+others 0.005191
+women 0.005032
+people 0.004686
+tell 0.004635
+believe 0.004498
+control 0.003911
+vp 0.003647
+will 0.003483
+catholic 0.003371
+bodies 0.003346
+refuse 0.003301
+biden's 0.003173
+now 0.002957
+said 0.002887
+says 0.002863
+can 0.002746
+position 0.002692
+ryan's 0.002622
+amp 0.002499
+rape 0.002476
+think 0.002444
+church's 0.002380
+church 0.002356
+friend 0.002353
+get 0.002323
+answer 0.002276
+question 0.002221
+one 0.002206
+religion 0.002205
+debates 0.002204
+religious 0.002128
+president 0.002091
+want 0.002091
+accept 0.002082
+conception 0.001928
+fact 0.001887
+pro 0.001885
+barackobama 0.001863
+joebiden 0.001792
+canÃ 0.001759
+say 0.001671
+personal 0.001670
+begins 0.001663
+make 0.001650
+faith 0.001592
+lol 0.001566
+going 0.001559
+really 0.001528
+time 0.001515
+know 0.001496
+way 0.001470
+thank 0.001437
+believes 0.001430
+beliefs 0.001422
+looks 0.001389
+stop 0.001367
+see 0.001345
+choice 0.001331
+body 0.001326
+policy 0.001298
+saying 0.001273
+keep 0.001271
+ass 0.001269
+man 0.001260
+look 0.001259
+pattonoswalt 0.001224
+never 0.001220
+refuses 0.001216
+actually 0.001203
+us 0.001201
+yes 0.001170
+even 0.001150
+talking 0.001143
+care 0.001139
+got 0.001136
+vice 0.001126
+obama2012 0.001126
+good 0.001124
+love 0.001111
+need 0.001111
+back 0.001104
+let 0.001080
+wade 0.001080
+moderator 0.001062
+
+The results seem to be relevant with regards to the context of US Vice Presidential debate in 2012, as the most influential words seem to be names of the VP candidates (Joe Biden & Paul Ryan) and some key issues debated during the 2012 election cycle (such as abortion debate), and the words like debate. For better results, we might detect url's during tokenization(http and co are very high up on that list) and perform some limited form of stemming (words like ryan's and biden's are high on the results)

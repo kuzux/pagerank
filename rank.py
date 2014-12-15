@@ -35,6 +35,8 @@ stop_words = set(['a', 'about', 'above', 'after', 'again', 'against', 'all',
 def is_stop(word):
     if word[0] == '@':
         return True
+    elif len(word) == 1:
+        return True
     elif word in stop_words: 
         return True
     else: 

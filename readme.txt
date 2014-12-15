@@ -1,0 +1,1 @@
+To run this program, you need python 2 installed (i've developed using python 2.7.6 on ubuntu 14.04) along with numpy and nltk. you can run it by just issuing the command "python rank.py" and it will read from tweetset.txt and write to results.txt in the same directory.
